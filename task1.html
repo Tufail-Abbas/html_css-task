@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task one</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li> index</li>
+            <li> skills</li>
+            <li > projects</li>
+            <li > contact</li>
+        </ul>
+    </div>
+    <div class="mian">
+        <div class="index show ">
+            <h1>index </h1>
+            <pre>
+ Lorem ipsum dolor sit, amet consectetur
+adipisicing elit. Consequuntur, facere
+libero, corrupti ipsa nesciunt ipsum
+ perferendis facilis beatae mollitia
+officia magnam quos officiis! Quisquam
+ enim nihil molestias. Doloribus, molestiae dicta!               
+    </pre>
+        </div>
+        <div class="skills hide">
+            <h1> skills </h1>
+            <pre>
+      Lorem ipsum dolor sit, amet consectetur
+      adipisicing elit. Consequuntur, facere
+      libero, corrupti ipsa nesciunt ipsum
+       perferendis facilis beatae mollitia
+      officia magnam quos officiis! Quisquam
+       enim nihil molestias. Doloribus, molestiae dicta! </pre>
+        </div>
+        <div class="project hide">
+            <h1> projects </h1>
+            <pre>
+    Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Obcaecati, odio molestiae 
+    aliquam possimus perferendis dicta quibusdam mollitia quisquam
+     tenetur quae fuga
+     nulla, impedit quaerat numquam? Aliquid necessitatibus inventore quos optio?</pre>
+        </div>
+        <div class="contact hide">
+            <h1>  contact </h1>
+            <pre>
+    Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Obcaecati, odio molestiae 
+    aliquam possimus perferendis dicta quibusdam mollitia quisquam
+    tenetur quae fuga
+     nulla, impedit quaerat numquam?
+      Aliquid necessitatibus inventore quos optio?</pre>
+        </div>
+    </div>
+<script>
+    let li=document.querySelectorAll('li')
+    let index=document.querySelector('.index')
+    let project=document.querySelector('.project')
+    let skills=document.querySelector('.skills')
+    let contact=document.querySelector('.contact')
+    
+ li.forEach(elem =>{
+    elem.addEventListener('click',()=>{
+        if(elem.innerText=="index")
+        {
+            index.style.display='block'
+            skills.style.display='none'
+            project.style.display='none'
+            contact.style.display='none'
+           
+            
+        }
+      else  if(elem.innerText=="skills")
+        {
+            skills.style.display='block'
+            index.style.display='none'
+            project.style.display='none'
+            contact.style.display='none'
+           
+            
+        }
+        else if(elem.innerText=="projects")
+
+            {
+            
+            project.style.display='block'
+            contact.style.display='none'
+            skills.style.display='none'
+            index.style.display='none'
+           
+            
+        }
+        else {
+            contact.style.display='block'
+            project.style.display='none'
+            skills.style.display='none'
+            index.style.display='none'
+        }
+       
+    })
+ })
+  
+
+
+</script>
+</body>
+</html>

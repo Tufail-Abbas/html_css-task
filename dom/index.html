@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    li{
+        margin-right: 50px;
+        font-size: 33px;
+        color: #bab8b8;
+        list-style: none;
+    }
+    .active{
+        color: black;
+    }
+.dt:not(:first-child){
+    display: none;
+}
+    .pro{
+       display: block;
+    }
+</style>
+<body>
+    <ul>
+        <li class="active">description</li>
+        <li>detail</li>
+        <li>review</li>
+        <li>price</li>
+    </ul>
+    <div class="container">
+        <div class="description dt">
+            <h2>description</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente commodi <br>incidunt, ducimus nesciunt, modi tempore perspiciatis ex, a quas suscipit <br>sint eligendi consectetur laudantium. Voluptatum magni ipsam rerum sed est?</p>
+        </div>
+        <div class="detail dt">
+            <h2>details</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente commodi <br>incidunt, ducimus nesciunt, modi tempore perspiciatis ex, a quas suscipit <br>sint eligendi consectetur laudantium. Voluptatum magni ipsam rerum sed est?</p>
+        </div>
+        <div class="review dt">
+            <h2>review</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente commodi <br>incidunt, ducimus nesciunt, modi tempore perspiciatis ex, a quas suscipit <br>sint eligendi consectetur laudantium. Voluptatum magni ipsam rerum sed est?</p>
+        </div>
+        <div class="review dt">
+            <h2>price</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente commodi <br>incidunt, ducimus nesciunt, modi tempore perspiciatis ex, a quas suscipit <br>sint eligendi consectetur laudantium. Voluptatum magni ipsam rerum sed est?</p>
+        </div>
+    </div>
+<script>
+    
+let li = document.querySelectorAll('li');
+let dt = document.querySelectorAll('.dt');
+li.forEach((elem, index) => {
+    elem.addEventListener('click', () => {
+        li.forEach(el => el.classList.remove('active'));
+        elem.classList.add('active');
+        dt.forEach(t => t.style.display = 'none');
+        if(dt[index]) {
+            dt[index].style.display = 'block';
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+.navbar{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(66, 66, 66);
+}
+ul{
+    display: flex;
+    align-items: center;
+}
+li{
+    margin-right: 40px;
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1.1px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

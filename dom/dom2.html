@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    ul{
+        width: 50%;
+list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        font-size: 39px;
+        cursor: pointer;
+        margin-right: 20px;
+        color: rgb(201, 200, 198);
+    }
+    .active{
+        color: black;
+    }
+    .dt{
+        display: none;
+    }
+</style>
+<body>
+    <ul>
+        <li>description</li>
+        <li>details</li>
+        <li>review</li>
+    </ul>
+    <div class="container">
+        <div class="description dt">
+            <h2>description</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente commodi <br>incidunt, ducimus nesciunt, modi tempore perspiciatis ex, a quas suscipit <br>sint eligendi consectetur laudantium. Voluptatum magni ipsam rerum sed est?</p>
+        </div>
+        <div class="detail dt">
+            <h2>details</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente commodi <br>incidunt, ducimus nesciunt, modi tempore perspiciatis ex, a quas suscipit <br>sint eligendi consectetur laudantium. Voluptatum magni ipsam rerum sed est?</p>
+        </div>
+        <div class="review dt">
+            <h2>review</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente commodi <br>incidunt, ducimus nesciunt, modi tempore perspiciatis ex, a quas suscipit <br>sint eligendi consectetur laudantium. Voluptatum magni ipsam rerum sed est?</p>
+        </div>
+    </div>
+    <script>
+        let dt=document.querySelectorAll('.dt')
+        let li=document.querySelectorAll('li')
+     li.forEach((elem,index)=>{
+      elem.addEventListener('click',()=>{
+      li.forEach(e=>{e.classList.remove('active')})
+      elem.classList.add('active')
+      dt.forEach(d=>{d.style.display="none"})
+      if(dt[index]){
+        dt[index].style.display='block'
+      }
+
+      })
+    
+     })
+    </script>
+</body>
+</html>
